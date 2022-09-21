@@ -127,10 +127,10 @@ function uniquifyArray(wordsUnique) {
 
     if(!noRepeated.includes(wordsUnique[i])){
       noRepeated.push(newStr);
-    }  return newStr
-
+    } 
+    
    
-   }
+   }  return noRepeated
    
 }
 
@@ -177,7 +177,6 @@ function howManyTimes(wordsCount, word) {
     if( word === wordsCount[i]){
       counter++
     } 
-    
   } return counter
 }
 
