@@ -91,7 +91,6 @@ function averageWordLength(wordsArr) {
       return wordsArr[i]
     } else { counter = counter + wordsArr[i].length }
   } 
-
   return counter / wordsArr.length
 
 
@@ -119,14 +118,20 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(wordsUnique) {
-   let repeatedWords = 0;
+   let noRepeated = [];
    if (wordsUnique.length === 0) {
      return null
    } 
    for (let i = 0; i < wordsUnique.length ; i++) {
-     if (wordsUnique === wordsUnique[i])
-     return wordsUnique[i];
-   } 
+    const newStr = wordsUnique[i];
+
+    if(!noRepeated.includes(wordsUnique[i])){
+      noRepeated.push(newStr);
+    }  return newStr
+
+   
+   }
+   
 }
 
 
@@ -134,10 +139,17 @@ function uniquifyArray(wordsUnique) {
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist(wordsFind) {
+function doesWordExist(wordsFind, word) {
   if (wordsFind.length === 0){
     return null;
   } 
+  for (let i = 0; i < words.Findlength; i++) {
+    if (wordsFind.length === 1 && wordsFind[i] === word) {
+      return true
+    } else if (word !== wordsFind[i]){
+      return false
+    } 
+  }
 }
 
 
@@ -157,10 +169,16 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes(wordsCount) {
+function howManyTimes(wordsCount, word) {
+  let counter = 0;
   if (wordsCount.length === 0){
     return 0
-  }
+  } for (let i = 0; i < wordsCount.length; i++){
+    if( word === wordsCount[i]){
+      counter++
+    } 
+    
+  } return counter
 }
 
 
