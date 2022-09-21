@@ -57,8 +57,19 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
+function sum(mixedArr) {
+  if (mixedArr.length === 0){
+    return 0;
+  }
+  for (let i = 0; i < mixedArr.length; i++){
+    if (mixedArr[i] === 0) {
+      return 0;
+    }
+  }
+  
+}
 
 
 // Iteration #4: Calculate the average
@@ -143,12 +154,14 @@ function doesWordExist(wordsFind, word) {
   if (wordsFind.length === 0){
     return null;
   } 
-  for (let i = 0; i < words.Findlength; i++) {
+  for (let i = 0; i < wordsFind.length; i++) {
     if (wordsFind.length === 1 && wordsFind[i] === word) {
-      return true
+      return true;
     } else if (word !== wordsFind[i]){
-      return false
-    } 
+      return false;
+    } else if (word === wordsFind[i]){
+      return true;
+    }
   }
 }
 
